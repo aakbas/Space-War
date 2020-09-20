@@ -64,8 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player.cs" />
-    <None Include="Assets\Space Shooter Visual Assets\license.txt" />
-    <None Include="Assets\Space Shooter Visual Assets\Spritesheet\sheet.xml" />
+    <None Include="Assets\z.Kenny Assets\license.txt" />
+    <None Include="Assets\z.Kenny Assets\Spritesheet\sheet.xml" />
     <Reference Include="UnityEngine">
       <HintPath>D:/unity/2019.4.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.AssetImporters;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -84,7 +85,9 @@ public class Player : MonoBehaviour
     {
         
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
+        if (!damageDealer) { return; }
         ProcessHit(damageDealer);
+        Destroy(collision.gameObject);
         
     }
 

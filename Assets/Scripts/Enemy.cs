@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    
     [SerializeField] float healt = 100;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
@@ -35,7 +36,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void Fire()
-    {
+    {        
         GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
     }
@@ -44,7 +45,7 @@ public class Enemy : MonoBehaviour
     {
         DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
         ProcessHit(damageDealer);
-        Destroy(collision.gameObject);
+      //  Destroy(collision.gameObject);
     }
 
     private void ProcessHit(DamageDealer damageDealer)

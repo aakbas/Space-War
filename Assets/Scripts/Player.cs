@@ -28,10 +28,13 @@ public class Player : MonoBehaviour
     float xMax;
     float yMin;
     float yMax;
+
+   
     // Start is called before the first frame update
     void Start()
     {
-        SetUpMoveBoundaries();       
+        SetUpMoveBoundaries();
+       
     }
 
     // Update is called once per frame
@@ -103,9 +106,14 @@ public class Player : MonoBehaviour
         health -= damageDealer.GetDamage();
         if (health <= 0)
         {
-            Destroy(gameObject);
-            AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSoundVolume);
+            Die();
         }
     }
-   
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSoundVolume);
+        FindObjectOfType<Level>().LoadGameOver();
+    }
 }

@@ -13,7 +13,7 @@ public class Level : MonoBehaviour
 
     public void LoadGameOver()
     {
-        SceneManager.LoadScene("Game Over");
+        StartCoroutine(DelayedGameOver());
     }
 
     public void LoadGameScene()
@@ -26,6 +26,12 @@ public class Level : MonoBehaviour
     {
         SceneManager.LoadScene("Start Menu");
        
+    }
+
+    IEnumerator DelayedGameOver()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Game Over");
     }
 
 }

@@ -102,7 +102,7 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 20
   projectileFiringPeriod: 0.1
-  deathSFX: {fileID: 8300000, guid: f22732b7f653d9648ae55ea5fef2d934, type: 3}
+  deathSFX: {fileID: 8300000, guid: 352da6b107f3cd9458a413677b4e9877, type: 3}
   deathSoundVolume: 1
   shootSFX: {fileID: 8300000, guid: c4e0b2ad99e69b64a957de580c8e4048, type: 3}
   shootSoundVolume: 0.32

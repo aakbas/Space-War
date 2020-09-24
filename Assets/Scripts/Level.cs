@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-  
+
+    
     public void QuitGame()
     {
         Application.Quit();
@@ -24,6 +25,7 @@ public class Level : MonoBehaviour
 
     public void LoadStartMenu()
     {
+        FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene("Start Menu");
        
     }

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Level.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\ScoreDisplay.cs" />
     <Compile Include="Assets\Scripts\Shredder.cs" />
     <Compile Include="Assets\Scripts\WaveConfig.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

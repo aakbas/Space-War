@@ -19,12 +19,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioClip shootSFX;
     [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.6f;
 
-
+    GameSession myGameSession;
 
     // Start is called before the first frame update
     void Start()
     {
         shotCounter = UnityEngine.Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
+        myGameSession = FindObjectOfType<GameSession>();
       
     }
 
@@ -74,6 +75,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
         var explosionParticle = Instantiate(explosionVFX, transform.position, Quaternion.identity);
         Destroy(explosionParticle, durationOfExplosion);
+        myGameSession.AddScore();
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSoundVolume);
     }
 }
